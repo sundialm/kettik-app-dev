@@ -35,7 +35,7 @@ public class RegistrationListener implements ApplicationListener<RegistrationCom
         service.createVerificationToken(user, this.token);
         String recipient = user.getEmail();
         String subject = "Registration Confirmation";
-        String confirmationUrl = "http://localhost:8080/confirm?token=" + this.token;
+        String confirmationUrl = "https://kettik-tour-app-dev.herokuapp.com/confirm?token=" + this.token;
 
         SimpleMailMessage email = new SimpleMailMessage();
         email.setTo(recipient);
